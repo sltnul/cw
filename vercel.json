@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "coursework/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "20mb", "runtime": "python3.11" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "coursework/wsgi.py"
+        }
+    ]
+}
